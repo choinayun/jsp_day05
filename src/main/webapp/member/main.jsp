@@ -24,7 +24,7 @@
 		<tr>	
 			<td><%=dto.getId() %></td>
 			<td><%=dto.getPwd() %></td> 
-			<td><%=dto.getName() %></td>
+			<td><a href=""><%=dto.getName() %></a></td>
 			<td><%=dto.getAddr() %></td>
 			<td><%=dto.getTel() %></td>
 		</tr>
