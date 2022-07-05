@@ -24,7 +24,11 @@
 		<tr>	
 			<td><%=dto.getId() %></td>
 			<td><%=dto.getPwd() %></td> 
-			<td><a href=""><%=dto.getName() %></a></td>
+			<td>
+				<a href="user_delete.jsp?id=<%=dto.getId() %>">
+					<%=dto.getName() %>
+				</a>
+			</td>
 			<td><%=dto.getAddr() %></td>
 			<td><%=dto.getTel() %></td>
 		</tr>

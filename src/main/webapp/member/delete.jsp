@@ -17,7 +17,7 @@
 	
 	<%
 		MemberDAO dao = new MemberDAO();
-		dao.delete( request.getParameter("abcd") );
+		dao.delete( request.getParameter("abcd") ); 
 		response.sendRedirect("logout.jsp");
 	%>
 

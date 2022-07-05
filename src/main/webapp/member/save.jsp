@@ -35,8 +35,8 @@
 			</script>
 		<% } %>
 		
-		// 실제로 값이 들어왔는지 아닌지 중간에 꼭 확인해줘야함 
-	%>
+		<!-- 실제로 값이 들어왔는지 아닌지 중간에 꼭 확인해줘야함 -->
+	
 	
 	<script>
 		alert('회원가입 성공');
@@ -54,16 +54,17 @@
 	<%= request.getParameter("tel") %><br>
 	<%= request.getParameter("pwd") %><br>
 	
-	dao 이동 넘어온 값 저장
-	sql = "insert into members(id, pwd, name, addr, tel)
-								values(?,?,?,?,?)"
-	ps.setString(1, id)							
-	ps.setString(2, pwd)							
-	ps.setString(3, name)							
-	ps.setString(4, addr)							
-	ps.setString(5, tel)	
-	
-	int result = ps.executeUpdate(); 				
+	<!-- 
+			dao 이동 넘어온 값 저장
+			sql = "insert into members(id, pwd, name, addr, tel)
+										values(?,?,?,?,?)"
+			ps.setString(1, id)							
+			ps.setString(2, pwd)							
+			ps.setString(3, name)							
+			ps.setString(4, addr)							
+			ps.setString(5, tel)	
+			
+			int result = ps.executeUpdate(); -->			
 	
 </body>
 </html>

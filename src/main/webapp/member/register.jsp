@@ -14,8 +14,8 @@
 	<br>
 
 	<%
-	MemberDAO dao = new MemberDAO();
-	ArrayList<MemberDTO> list = dao.getMember();
+		MemberDAO dao = new MemberDAO();
+		ArrayList<MemberDTO> list = dao.getMember();
 	%>
 
 	<form id="fo" action="save.jsp" method="post">
@@ -54,7 +54,6 @@
 		function chk() {
 			// alert("chk 호출")
 			let id = document.getElementById("id")
-			
 
 			if (id.value == "") {
 				alert("아이디는 필수 항목 입니다")
