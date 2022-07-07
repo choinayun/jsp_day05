@@ -10,19 +10,23 @@
 </head>
 <body> save.jsp <br>
 
-	<% 
-		request.setCharacterEncoding("utf-8"); 
+	<% request.setCharacterEncoding("utf-8"); %>
 		
-		MemberDAO dao = new MemberDAO();
-		MemberDTO dto = new MemberDTO();
+	<jsp:useBean id="dao" class="member.MemberDAO"/>
+	<jsp:useBean id="dto" class="member.MemberDTO"/>
+	
+	<jsp:setProperty property="*" name="dto"/>
 		
-		dto.setId( request.getParameter("id") );
-		dto.setAddr( request.getParameter("addr") );
-		dto.setName( request.getParameter("name") );
-		dto.setTel( request.getParameter("tel") );
-		dto.setPwd( request.getParameter("pwd") );
+	<%-- MemberDAO dao = new MemberDAO();
+		 MemberDTO dto = new MemberDTO();
 		
-		int result = dao.insert(dto);
+		 dto.setId( request.getParameter("id") );
+		 dto.setAddr( request.getParameter("addr") );
+		 dto.setName( request.getParameter("name") );
+		 dto.setTel( request.getParameter("tel") );
+		 dto.setPwd( request.getParameter("pwd") );  --%>
+		
+	<% 	int result = dao.insert(dto);
 		if(result == 1) { %>
 			<script>
 				alert('회원가입 성공');
